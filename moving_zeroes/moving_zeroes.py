@@ -4,8 +4,11 @@ Returns: a List of integers
 '''
 def moving_zeroes(arr):
     # Your code here
-
-    pass
+  
+    for _ in arr:
+        arr.append(arr.pop(arr.index(0)))
+     
+    return arr
 
 
 if __name__ == '__main__':
