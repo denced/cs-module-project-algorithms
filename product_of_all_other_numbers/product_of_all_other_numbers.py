@@ -1,12 +1,22 @@
+import math
 '''
 Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
-
-    pass
-
+    index = 0
+    result_arr = []
+    while_arr = []
+    while index <= len(arr) - 1:
+        while_arr = arr
+        i = while_arr[index]
+        while_arr.remove(while_arr[index])
+        product = math.prod(while_arr)
+        while_arr.insert(index, i)
+        result_arr.append(product)
+        index += 1
+    return result_arr
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
